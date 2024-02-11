@@ -1,0 +1,13 @@
+@use "../../assets/scss/presets" as *;
+@use "../../assets/scss/mixins" as *;
+
+.comments {
+  background: $color-bg;
+  padding: 30px 20px;
+
+  @include lg {
+    width: 100vw;
+    padding: 20px 10px;
+    order: 2;
+  }
+}

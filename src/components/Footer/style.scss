@@ -1,0 +1,122 @@
+@use "../../assets/scss/presets" as *;
+@use "../../assets/scss/mixins" as *;
+
+.footer {
+  background: $color-bg-footer;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: rgba(69, 69, 69, 1);
+    position: absolute;
+    top: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: $gap-xl 0;
+    align-items: flex-end;
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    @include lg {
+      margin-bottom: $gap-lg;
+      gap: $gap-md;
+    }
+
+    &-phones {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-sm;
+
+      &-country {
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: rgba(163, 163, 163, 1);
+
+        @include lg {
+          font-size: 0.675rem;
+        }
+      }
+
+      &-number {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+
+        @include lg {
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+
+    &-media {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-telegram {
+        background: transparent;
+        border: 1px solid $color-white;
+        padding: $gap-sm 0;
+        gap: $gap-md;
+        border-radius: 7px;
+        max-width: 190px;
+
+        @include lg {
+          order: 2;
+        }
+      }
+
+      &-mail {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.2;
+        display: flex;
+        gap: $gap-sm;
+        align-items: center;
+
+        @include lg {
+          font-size: 0.675rem;
+        }
+
+        @include xs {
+          gap: 0;
+        }
+      }
+    }
+
+  }
+
+  &__notes {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+
+    @include lg {
+      text-align: center;
+      font-size: 0.675rem;
+    }
+  }
+}

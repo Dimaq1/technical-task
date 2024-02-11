@@ -1,0 +1,151 @@
+@use '../../assets/scss/presets' as *;
+@use "../../assets/scss/mixins" as *;
+
+.banner {
+  display: flex;
+  background-color: $color-bg;
+  padding: $gap-md $gap;
+  position: relative;
+  gap: $gap-lg;
+
+
+  @include lg {
+    padding: $gap-lg $gap-md;
+  }
+
+  @include md {
+    flex-direction: column;
+  }
+
+  &::after {
+    content: '';
+    background: linear-gradient(to left, rgba(86, 0, 225, 0.3), transparent);
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../../../public/images/alex-banner.png');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    @include md {
+      bottom: $gap-lg;
+      right: $gap-md;
+      background-image: url('../../../public/images/alex-with-phone.png')
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+
+    &-text {
+      font-size: 0.9375em;
+      line-height: 1.4;
+      letter-spacing: 0;
+
+      @include ul {
+        max-width: 500px;
+      }
+
+      @include md {
+        max-width: 500px;
+        font-size: 0.75rem;
+      }
+
+      &-border {
+        @include lg {
+          border: 1px solid $color-main;
+          width: fit-content;
+          max-width: fit-content;
+          padding: 10px;
+          text-align: center;
+          font-size: 0.625rem;
+        }
+      }
+    }
+
+    &-title {
+      font-family: $font-secondary;
+      line-height: 1;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: $color-main;
+      margin-bottom: 20px;
+
+      @include md {
+        margin-bottom: 5px;
+        font-size: 1.25rem;
+      }
+    }
+
+    &-button {
+      font-size: 0.9375em;
+      line-height: 2.5;
+      letter-spacing: 0;
+      background: $color-main;
+      border: none;
+      color: $color-white;
+      padding: 5px 14px;
+      margin-top: 15px;
+      max-width: fit-content;
+
+      @include md {
+        width: 100%;
+        font-size: 0.875rem;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.text {
+
+  &__before {
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-color: $color-main;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 10px;
+
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__medium {
+    font-weight: 500;
+  }
+
+  &__color-main {
+    color: $color-main;
+  }
+
+  &__max-width {
+    max-width: 405px;
+  }
+}

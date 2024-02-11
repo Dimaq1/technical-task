@@ -1,0 +1,63 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $color-white;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+@include lg-min {
+  .container {
+    width: min(100% - 40px, 1520px);
+    margin-inline: auto;
+  }
+}
+
+@include lg {
+  .container-secondary {
+    width: min(100% - 40px, 1520px);
+    margin-inline: auto;
+  }
+}

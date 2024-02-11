@@ -1,0 +1,114 @@
+@use "../../assets/scss/presets" as *;
+@use "../../assets/scss/mixins" as *;
+
+.form {
+  width: 100%;
+  margin-bottom: $gap-lg;
+
+  &__comment {
+    width: 100%;
+    max-height: 120px;
+    padding: $gap;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    background: $color-bg-field;
+    border: none;
+    color: $color-white;
+    margin-bottom: $gap-lg;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  &__socials {
+    margin-bottom: $gap-lg;
+
+    &-text {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: $gap-md;
+
+      @include lg {
+        font-size: 0.875rem;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $gap;
+
+      &-item {
+
+        &-link {
+
+          &>img {
+            width: 36px;
+            height: 36px;
+
+            @include lg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    margin-bottom: $gap;
+
+    &-text {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.25;
+
+      @include lg {
+        font-size: 0.875rem;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $gap-md;
+
+
+      &-field {
+        width: 100%;
+        background: $color-bg-field;
+        border: none;
+        color: $color-white;
+        font-family: Montserrat;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25;
+        padding: $gap-md;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+
+  &__button {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+    width: 100%;
+    background: $color-main;
+    border: none;
+    color: $color-white;
+    padding: $gap-md;
+    cursor: pointer;
+  }
+}

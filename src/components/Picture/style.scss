@@ -1,0 +1,22 @@
+@use "../../assets/scss/presets" as *;
+@use "../../assets/scss/mixins" as *;
+
+.picture {
+  max-width: 950px;
+  max-height: 534px;
+  margin-bottom: 35px;
+
+  @include lg {
+    margin-left: -$gap;
+    margin-bottom: 0;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+
+    @include lg {
+      width: 100vw;
+    }
+  }
+}

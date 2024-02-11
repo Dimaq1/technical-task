@@ -1,0 +1,74 @@
+@use "../../assets/scss/presets" as *;
+@use "../../assets/scss/mixins" as *;
+
+.advantages {
+  max-width: 745px;
+  margin: auto;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: $gap-xl;
+
+    @include lg {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-xl 15px;
+
+    @include lg {
+      grid-template-columns: 1fr;
+      gap: $gap;
+    }
+
+    &-item {
+      display: flex;
+      width: 100%;
+
+
+      &-text {
+        background: $color-bg;
+        padding: 0 10% 0 $gap;
+        position: relative;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.2;
+        width: 100%;
+
+        @include lg {
+          min-height: 80px;
+        }
+
+        @include sm {
+          font-size: 0.75rem;
+        }
+      }
+
+      &-images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 70px;
+        margin-left: -9%;
+
+        @include lg {
+          margin-left: -5%;
+        }
+
+        &-check {
+          position: absolute;
+        }
+      }
+    }
+  }
+}
