@@ -14,7 +14,7 @@ function Video() {
 
   return (
     <div className='wrapp'>
-      <img onClick={handleClickVideo} className='wrapp__image' src="../../public/images/video-cover.png" alt="#" />
+      <img onClick={handleClickVideo} className='wrapp__image' src="./images/video-cover.png" alt="#" />
       <iframe
         ref={videoRef}
         className='wrapp__iframe'

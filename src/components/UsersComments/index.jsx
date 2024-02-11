@@ -34,19 +34,19 @@ function UsersComments() {
                     <div className='users__actions-counters'>
                       <div className='users__actions-inner'>
                         <button onClick={() => handleLike(item.id)} className='users__actions-inner-button btn-users'>
-                          <img src="../../public/images/like.svg" alt="#" />
+                          <img src="./images/like.svg" alt="#" />
                         </button>
                         <p className='users__actions-inner-counter'>0</p>
                       </div>
                       <div className='users__actions-inner'>
                         <button onClick={() => handleDislike(item.id)} className='users__actions-inner-button btn-users'>
-                          <img src="../../public/images/dislike.svg" alt="#" />
+                          <img src="./images/dislike.svg" alt="#" />
                         </button>
                         <p className='users__actions-inner-counter'>0</p>
                       </div>
                     </div>
                     <button className='users__actions-options btn-users'>
-                      <img src="../../public/images/options.svg" alt="#" />
+                      <img src="./images/options.svg" alt="#" />
                     </button>
                   </div>
                 </div>

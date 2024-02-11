@@ -4,7 +4,7 @@ import './style.scss'
 function Picture() {
   return (
     <div className='picture'>
-      <img className='picture__image' src="../../public/images/picture-main.png" alt="#" />
+      <img className='picture__image' src="./images/picture-main.png" alt="#" />
     </div>
   )
 }

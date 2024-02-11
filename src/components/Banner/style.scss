@@ -30,7 +30,7 @@
 
   &::before {
     content: '';
-    background-image: url('../../../public/images/alex-banner.png');
+    background-image: url('./images/alex-banner.png');
     position: absolute;
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -43,7 +43,7 @@
     @include md {
       bottom: $gap-lg;
       right: $gap-md;
-      background-image: url('../../../public/images/alex-with-phone.png')
+      background-image: url('./images/alex-with-phone.png')
     }
   }
 

@@ -18,11 +18,11 @@ function Footer() {
 
 
           <a className='footer__socials-media footer__socials-media-telegram' target="_blank" rel="noopener noreferrer" href="https://web.telegram.org/a/">
-            <img src="../../../public/images/telegram-footer.svg" alt="#" />
+            <img src="./images/telegram-footer.svg" alt="#" />
             <p>Telegram</p>
           </a>
           <a className='footer__socials-media footer__socials-media-mail' target="_blank" rel="noopener noreferrer" href="mailto:info@alexyanovsky.info">
-            <img src="../../../public/images/mail.svg" alt="#" />
+            <img src="./images/mail.svg" alt="#" />
             <p>info@alexyanovsky.info</p>
           </a>
 
